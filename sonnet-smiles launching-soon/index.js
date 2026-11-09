@@ -143,3 +143,39 @@ faqItems.forEach(item => {
     });
 
 });
+
+
+const playBtn = document.getElementById("playBtn");
+const closeBtn = document.getElementById("closeBtn");
+const videoOverlay = document.getElementById("videoOverlay");
+const video = document.getElementById("myVideo");
+
+// Open overlay and play video
+playBtn.addEventListener("click", () => {
+    videoOverlay.classList.add("active");
+    video.play();
+});
+
+// Close overlay, pause video, and reset timestamp
+const closeVideoModal = () => {
+    videoOverlay.classList.remove("active");
+    video.pause();
+    video.currentTime = 0; // Resets video back to start
+};
+
+closeBtn.addEventListener("click", closeVideoModal);
+
+// Close when clicking the dark background overlay backdrop
+videoOverlay.addEventListener("click", (e) => {
+    if (e.target === videoOverlay) {
+        closeVideoModal();
+    }
+});
+
+// Listen for global keyboard presses (Esc Key)
+document.addEventListener("keydown", (e) => {
+    // Checks if the Escape key is pressed AND if the overlay is currently open
+    if (e.key === "Escape" && videoOverlay.classList.contains("active")) {
+        closeVideoModal();
+    }
+});
