@@ -59,7 +59,7 @@ a {
     --grey: #E0E0E0;
     --grey-navbar: whitesmoke;
 
-    --catchycolor: #ffbd2e;
+    --catchycolor: #78ebff;
 
     --cxo: 1000;
     --manager: 100;
@@ -441,7 +441,7 @@ a {
 .navbar {
     position: fixed;
     left: 10%;
-    top: .5rem;
+    top: 0rem;
     width: 80%;
     max-height: 60px;
     display: flex;
@@ -535,7 +535,6 @@ a {
     .navbar {
         position: fixed;
         left: 5%;
-        top: .25rem;
         width: 90%;
     }
 
@@ -557,10 +556,10 @@ a {
 /* Fixed container along the very top edge */
 .progress-container {
     position: fixed;
-    top: 56px;
+    top: 45px;
     left: 10%;
     width: 80%;
-    height: 2px;
+    height: 5px;
     background-color: var(--grey);
     z-index: var(--manager);
 }
@@ -569,7 +568,7 @@ a {
 .progress-bar {
     height: 100%;
     width: 0%;
-    background: var(--black);
+    background: var(--catchycolor);
     transition: width 1s ease-out;
 }
 
@@ -584,7 +583,8 @@ a {
     .progress-container {
         left: 5%;
         width: 90%;
-        top: 52px;
+        top: 45px;
+        height: 3px;
     }
 }
 
@@ -1350,5 +1350,196 @@ a {
     .sec-two a,
     .sec-two a svg {
         font-size: 1rem;
+    }
+}
+
+/* ----------------------------- */
+/* Comparison Section Scoped */
+.comparison-container {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    aspect-ratio: 16/9;
+    /* border-radius: .5rem; */
+    overflow: hidden;
+    /* box-shadow:
+        0 20px 60px -20px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(0, 0, 0, 0.05); */
+    background: #fff;
+    user-select: none;
+    height: 400px;
+}
+
+.comparison-container .image-wrapper {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.comparison-container .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.comparison-container .image-before {
+    z-index: 1;
+    clip-path: inset(0 50% 0 0);
+}
+
+.comparison-container .image-after {
+    z-index: 0;
+    filter: saturate(1.1) contrast(1.05);
+}
+
+/* Labels */
+.comparison-container .label {
+    position: absolute;
+    top: 20px;
+    padding: 8px 16px;
+    background: var(--white);
+    backdrop-filter: blur(10px);
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 100px;
+    z-index: 2;
+    opacity: 0;
+    /* transform: translateY(-10px); */
+    transition: all 0.3s ease;
+}
+
+.comparison-container:hover .label {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.comparison-container .label-before {
+    left: 20px;
+    opacity: 1;
+}
+
+.comparison-container .label-after {
+    right: 20px;
+    opacity: 1;
+}
+
+/* Slider Handle Line with Gradient Fade */
+.comparison-container .slider-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.comparison-container .slider-line::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            transparent 0%,
+            rgba(255, 255, 255, 0.3) 15%,
+            rgba(255, 255, 255, 0.9) 40%,
+            rgba(255, 255, 255, 0.9) 60%,
+            rgba(255, 255, 255, 0.3) 85%,
+            transparent 100%);
+}
+
+/* Knob */
+.comparison-container .slider-knob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 50%;
+    z-index: 4;
+    cursor: grab;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(0, 0, 0, 0.05);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.comparison-container .slider-knob:active {
+    cursor: grabbing;
+    transform: translate(-50%, -50%) scale(0.95);
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.comparison-container .slider-knob svg {
+    width: 20px;
+    height: 20px;
+    color: #1a1a1a;
+    opacity: 0.6;
+}
+
+/* Hover glow effect on knob */
+.comparison-container .slider-knob::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.8) 0%,
+            transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.comparison-container:hover .slider-knob::before {
+    opacity: 1;
+}
+
+/* Dragging state */
+.comparison-container.dragging .image-before {
+    transition: none;
+}
+
+.comparison-container.dragging .slider-line,
+.comparison-container.dragging .slider-knob {
+    transition: none;
+}
+
+/* Smooth transitions when not dragging */
+.comparison-container .image-before,
+.comparison-container .slider-line,
+.comparison-container .slider-knob {
+    transition: left 0.1s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .comparison-container {
+        max-width: 90%;
+    }
+
+    .comparison-container .slider-knob {
+        width: 36px;
+        height: 36px;
+    }
+
+    .comparison-container .slider-knob svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .comparison-container .label {
+        font-size: 0.75rem;
+        padding: 6px 15px;
     }
 }
