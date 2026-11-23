@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogsI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./common.css">
+    <link rel="stylesheet" href="./css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" />
+    <link rel="stylesheet" href="https://sonnetsmile.com/11112026/cdn/aos.css">
+
+    <!-- favicon -->
+    <link rel="icon"
+        href="https://img.icons8.com/external-doodle-color-bomsymbols-/500/external-dental-dental-colors-doodle-doodle-color-bomsymbols--10.png">
+
+</head>
+
+<body>
+
+    <!-- preloader -->
+    <div class="preloader" id="preloader">
+        <img src="https://sonnetsmile.com/11112026/logo/logoT.png" alt="cars">
+    </div>
+
+    <!-- navbar -->
+    <div class="navbar">
+        <a href="./" class="navbar-logo">
+            <img src="https://sonnetsmile.com/11112026/logo/logoT.png" alt="Sonnet Smile">
+        </a>
+
+        <div class="navbar-clickable">
+            <i class="fa-solid fa-plus hamIcon"></i>
+            <i class="fa-solid fa-close closeIcon"></i>
+        </div>
+
+        <div class="responsive-lap-mobile">
+            <div class="navbar-menu">
+
+                <!-- 1. Home -->
+                <a href="./">
+                    <svg viewBox="0 0 357 357" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0 149.818L178.175 5.93915L356.35 149.818V356.349H271.712V295.155C271.712 243.496 229.834 201.618 178.175 201.618C126.515 201.618 84.6374 243.496 84.6374 295.155V356.349H0V149.818Z" />
+                    </svg>
+                    Home
+                </a>
+
+                <!-- 2. All Services -->
+                <a href="./services.html">
+                    <svg viewBox="0 0 357 357" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M1.73938e-06 177.581C2.2807e-06 267.114 178.175 177.581 178.175 177.581C178.175 177.581 1.19806e-06 88.0481 1.73938e-06 177.581Z" />
+                        <path
+                            d="M356.35 177.581C356.35 267.114 178.175 177.581 178.175 177.581C178.175 177.581 356.35 88.0481 356.35 177.581Z" />
+                        <path
+                            d="M89.0877 331.885C166.625 376.651 178.175 177.581 178.175 177.581C178.175 177.581 11.55 287.118 89.0877 331.885Z" />
+                        <path
+                            d="M267.262 23.277C344.8 68.0435 178.175 177.581 178.175 177.581C178.175 177.581 189.725 -21.4894 267.262 23.277Z" />
+                        <path
+                            d="M267.262 331.885C189.724 376.651 178.175 177.581 178.175 177.581C178.175 177.581 344.8 287.118 267.262 331.885Z" />
+                        <path
+                            d="M89.0871 23.277C11.5494 68.0435 178.175 177.581 178.175 177.581C178.175 177.581 166.625 -21.4894 89.0871 23.277Z" />
+                    </svg>
+                    All Services
+                </a>
+
+                <!-- 3. Meet the Team -->
+                <a href="./team.html">
+                    <svg viewBox="0 0 357 357" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M356.35 0H237.566V118.783H118.783V237.566H0V356.35H356.35V0Z" />
+                    </svg>
+                    Meet the Team
+                </a>
+
+                <!-- 4. The Experience -->
+                <a href="./experience.html">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.00242398 200C0.000809232 199.834 0 199.667 0 199.5C0 174.111 18.7366 153.097 43.1371 149.533C18.7701 146.188 0 125.286 0 100C0 72.3858 22.3858 50 50 50H50.5C22.7765 50 0.270718 27.6601 0.00242398 0H199.998C199.729 27.6601 177.224 50 149.5 50H150C177.614 50 200 72.3858 200 100C200 125.286 181.23 146.188 156.863 149.533C181.263 153.097 200 174.111 200 199.5C200 199.667 199.999 199.834 199.998 200H0.00242398Z" />
+                    </svg>
+                    The Experience
+                </a>
+
+                <!-- 5. Blog -->
+                <a href="./blog.html">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0H200V200H0Z" />
+                    </svg>
+                    Blog
+                </a>
+
+                <!-- 6. Contact Us -->
+                <a href="./contact.html">
+                    <svg viewBox="0 0 357 357" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M141.973 85.5469C106.123 54.7091 52.0556 58.797 21.2493 94.6746C-9.51888 130.508 -5.43715 184.493 30.3689 215.293L176.234 340.762L177.378 342.095L177.581 341.921L177.783 342.095L178.928 340.762L324.793 215.293C360.599 184.493 364.681 130.508 333.912 94.6746C303.106 58.797 249.039 54.7091 213.188 85.5469L177.581 116.176L141.973 85.5469Z" />
+                    </svg>
+                    Contact Us
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar adjuster -->
+    <div class="navbar-adjuster"></div>
+
+    <!-- call appointment -->
+    <div class="call-appointment" id="call-appointment">
+        <a href="">(+91) 9988776655</a>
+        <a href="">Book an Appointment</a>
+    </div>
+
+    <div class="blogs-internal-content common-width">
+        <h2>
+            Not Just Aligners. A Thoughtfully Designed Smile.
+        </h2>
+
+        <div class="author-details">
+            <img src="https://cdn.prod.website-files.com/65687fe7191e16497ba81b7c/65698c825722965dd00103ab_Author2.jpg"
+                class="img3" alt="">
+            <h3>
+                Sonnetsmile
+            </h3>
+            <h6>
+                Feb 24
+            </h6>
+        </div>
+
+        <div class="banner-image">
+            <img src="https://static.wixstatic.com/media/11062b_df4f32f157c14cd9898f2604ad9f2f03~mv2.jpeg/v1/fill/w_740,h_493,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_df4f32f157c14cd9898f2604ad9f2f03~mv2.jpeg"
+                alt="Not Just Aligners. A Thoughtfully Designed Smile">
+        </div>
+
+        <p>
+            At Sonnetsmile, we don't believe in factory-made orthodontics. We believe your smile should suit your face,
+            your personality, and your facial structure — not just a digital template. That's why our aligner system is
+            thoughtfully designed around you.
+        </p>
+
+        <p>
+            It's all about your smile and your moments — moments we will relish every time you emote. Aligners from
+            Dr. Ashwin at Sonnetsmile are tailored to your facial profile rather than following a standard textbook
+            approach.
+        </p>
+
+        <div class="subhead">
+            We Design Smiles for the Whole Face — Not Just Teeth
+        </div>
+
+        <p>
+            Most aligner systems plan treatment using only a scan of your teeth. At Sonnetsmile, we go a step further
+            by integrating advanced 3D Face Scan technology into our aligner workflow.
+        </p>
+
+        <p>
+            This allows us to look beyond straight teeth and consider how your smile supports your lips, enhances your
+            facial profile, and creates harmony between your smile arc and overall facial proportions.
+        </p>
+
+        <p>
+            By combining intraoral scans, 3D facial scans, and digital smile simulation, we design aligners that
+            complement your entire face — not just align your teeth.
+        </p>
+
+        <div class="subhead">
+            Precision Built with German Engineering
+        </div>
+
+        <p>
+            Your aligners are fabricated using high-precision German production equipment known for accuracy and
+            consistency. Even tiny variations in aligner thickness or trimming can influence comfort, force delivery,
+            and treatment predictability.
+        </p>
+
+        <p>
+            Our advanced production systems support micron-level precision, helping ensure that every aligner fits
+            according to the treatment plan. The result is a controlled, consistent, and reliable fabrication process.
+        </p>
+
+        <div class="subhead">
+            Robotic Trimming — Clean, Precise, Hygienic
+        </div>
+
+        <p>
+            Another major difference is our multi-axis robotic aligner trimming system. While many aligners are trimmed
+            manually, our aligners are precisely contoured using robotic technology.
+        </p>
+
+        <p>
+            This process helps create smooth edges along the gum line, minimizes rough or sharp edges, and supports
+            consistent fabrication in a clean, controlled environment. Reduced manual handling also contributes to
+            better hygiene and consistency.
+        </p>
+
+        <p>
+            Patients often tell us that our aligners feel smoother and more comfortable. That's not by accident — it's
+            by design.
+        </p>
+
+        <div class="subhead">
+            Your Treatment Plan Is Designed by Dr. Ashwin — Personally
+        </div>
+
+        <p>
+            One of the biggest differences at Sonnetsmile is the personal involvement of Dr. Ashwin in treatment
+            planning. Rather than relying entirely on a remote technician, every movement, attachment, and stage of
+            treatment is planned personally by the doctor.
+        </p>
+
+        <p>
+            He carefully evaluates bite dynamics, root positions, bone support, facial proportions, and long-term
+            treatment stability. This doctor-led approach helps improve treatment precision and minimize unnecessary
+            refinements.
+        </p>
+
+        <p>
+            You're not getting a technician-designed smile. You're getting a doctor-designed one.
+        </p>
+
+        <div class="subhead">
+            Premium Multi-Layer Materials for Better Comfort
+        </div>
+
+        <p>
+            We use advanced multi-layer aligner materials designed to deliver gentle, consistent forces, maintain
+            clarity for longer, improve durability, and enhance overall comfort.
+        </p>
+
+        <p>
+            Patients often describe our aligners as feeling more natural and less tight compared to generic systems.
+            That's because sustained, consistent force is better than sudden force.
+        </p>
+
+        <div class="subhead">
+            So What's the Real Difference?
+        </div>
+
+        <p>
+            Commercial aligner systems often focus on scaling and production volume. At Sonnetsmile, we focus on
+            control, precision, and personalization.
+        </p>
+
+        <p>
+            While conventional systems primarily focus on straightening teeth, our approach considers the relationship
+            between your teeth, facial profile, smile aesthetics, and long-term stability.
+        </p>
+
+        <div class="subhead">
+            A Thoughtfully Designed Smile, In Simple Words
+        </div>
+
+        <p>
+            At Sonnetsmile, your personalized aligner journey brings together advanced technology, precision
+            engineering, robotic fabrication, and expert clinical planning.
+        </p>
+
+        <ul>
+            <li>Advanced 3D Face Scan integration for facially guided smile design.</li>
+            <li>Combination of intraoral scans and digital smile simulation.</li>
+            <li>German-engineered aligner fabrication for high precision.</li>
+            <li>Multi-axis robotic trimming for smooth and consistent finishing.</li>
+            <li>Personalized treatment planning led by Dr. Ashwin.</li>
+            <li>Detailed assessment of bite dynamics, root positions, and bone support.</li>
+            <li>Premium multi-layer materials for comfort and durability.</li>
+            <li>A smile design approach that considers your entire facial profile.</li>
+        </ul>
+
+        <p>
+            Get in touch with Sonnetsmile today to schedule a consultation with Dr. Ashwin and discover how
+            thoughtfully designed clear aligners can help create a smile that complements your face.
+        </p>
+    </div>
+
+    <div class="height-a"></div>
+
+    <!-- footer -->
+    <div class="foot common-width">
+        <div class="line1" data-aos="fade-up" data-aos-delay="100">
+            Built on thousands of conversations, appointments, and returning patients.
+        </div>
+
+        <div class="line2">
+            <div class="left">
+                <a href="" data-aos="fade-up" data-aos-delay="100">
+                    Book Your Appointment
+                    <img src="https://cdn.prod.website-files.com/6a41f6e1adab917fcef17541/6a44fea1d6e7edc9a4b41fe7_arrow-right.svg"
+                        alt="">
+                </a>
+            </div>
+
+            <div class="right">
+                <a href="https://wa.me/919458600028?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment."
+                    target="_blank" rel="noopener noreferrer" class="whatsapp" aria-label="Chat with us on WhatsApp"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+                <a href="https://maps.app.goo.gl/tbWyoGAb2FeHuSiw6" target="_blank" rel="noopener noreferrer"
+                    class="location" aria-label="Find our dental clinic" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-street-view"></i>
+                </a>
+
+                <a href="https://www.instagram.com/sonnetsmilelab" target="_blank" rel="noopener noreferrer"
+                    class="instagram" aria-label="Follow us on Instagram" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="line3">
+            <div class="line3-div">
+                <h3 data-aos="fade-up" data-aos-delay="100">Pages</h3>
+                <nav>
+                    <a data-aos="fade-up" data-aos-delay="100" href="#">Home</a>
+                    <a data-aos="fade-up" data-aos-delay="100" href="#">All Services</a>
+                    <a data-aos="fade-up" data-aos-delay="100" href="#">Meet the Team</a>
+                    <a data-aos="fade-up" data-aos-delay="100" href="#">The Experience</a>
+                    <a data-aos="fade-up" data-aos-delay="100" href="#">Blogs</a>
+                    <a data-aos="fade-up" data-aos-delay="100" href="#">Contact</a>
+                </nav>
+            </div>
+
+            <div class="line3-div">
+                <h3 data-aos="fade-up" data-aos-delay="100">Utility Pages</h3>
+                <nav>
+                    <a data-aos="fade-up" data-aos-delay="100" href="#">Sitemap</a>
+                    <a data-aos="fade-up" data-aos-delay="100" href="#">Privacy Policy</a>
+                    <a data-aos="fade-up" data-aos-delay="100" href="#">Payment Policy</a>
+                </nav>
+            </div>
+
+            <div class="line3-div">
+                <h3 data-aos="fade-up" data-aos-delay="100">Contact</h3>
+
+                <!-- <p data-aos="fade-up" data-aos-delay="100">
+                    Phone: <a href="tel:+919458600028">(+91) 9458600028</a>
+                </p> -->
+                <p data-aos="fade-up" data-aos-delay="100">
+                    Emergency: <a href="tel:+919458600028">(+91) 9458600028</a>
+                </p>
+                <p data-aos="fade-up" data-aos-delay="100">
+                    Email: <a href="mailto:hello@oralux.com">hello@oralux.com</a>
+                </p>
+
+                <h3 class="clinich3" data-aos="fade-up" data-aos-delay="100">Clinic Location</h3>
+                <p data-aos="fade-up" data-aos-delay="100">
+                    38, Prithvi Ave 1st St, <br> 2nd Street, Abiramapuram, <br>Chennai, Tamil Nadu 600018
+                </p>
+            </div>
+
+            <div class="line3-div">
+                <h3 data-aos="fade-up" data-aos-delay="100">Opening Hours</h3>
+
+                <p data-aos="fade-up" data-aos-delay="100">
+                    Monday – Friday:<br>
+                    9:00 AM – 9:00 PM
+                </p>
+                <p data-aos="fade-up" data-aos-delay="100">
+                    Saturday:<br>
+                    9:00 AM – 5:00 PM
+                </p>
+                <p data-aos="fade-up" data-aos-delay="100">
+                    Sunday: Closed
+                </p>
+            </div>
+        </div>
+
+        <div class="line4">
+            © 2026 Sonnet. All rights reserved.
+        </div>
+    </div>
+
+</body>
+
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/js/all.js"></script>
+<script src="https://seite.in/zxcvbnm/cdn/lenis.js"></script>
+<script src="https://sonnetsmile.com/11112026/cdn/aos.js"></script>
+<script src="./js.js"></script>
+
+</html>
