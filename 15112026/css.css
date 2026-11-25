@@ -16,7 +16,7 @@
     color: white;
     font-size: 6.5rem;
     max-width: max-content;
-    letter-spacing: -5% !important;
+    letter-spacing: -3% !important;
     line-height: .9 !important;
     font-weight: 900 !important;
 }
@@ -166,7 +166,7 @@
     align-items: center;
     gap: .25rem;
     opacity: .5 !important;
-    letter-spacing: -5%;
+    letter-spacing: -3%;
 }
 
 .section-b p svg {
@@ -275,13 +275,14 @@
     .section-c .section-c-div {
         min-width: 90%;
         max-width: 90%;
+        border-radius: 2rem;
     }
 
     .section-c {
         overflow-x: scroll;
         padding-inline: 5%;
         gap: 1rem;
-        height: 350px;
+        height: 320px;
     }
 
     .section-c .section-c-div a {
@@ -309,7 +310,7 @@
     justify-content: center;
     gap: .25rem;
     opacity: .5 !important;
-    letter-spacing: -5%;
+    letter-spacing: -3%;
     max-width: max-content;
     font-size: 1.25rem;
 }
@@ -332,7 +333,7 @@
     font-size: 3rem;
     line-height: 1;
     margin: 0 10% 3rem 0;
-    letter-spacing: -5%;
+    letter-spacing: -3%;
 }
 
 .section-d .sd-two .left img {
@@ -722,35 +723,43 @@
 .our-team-main {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    /* flex-wrap: wrap; */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem 1%;
 }
 
 .our-team-main .otm {
-    width: 24%;
+    width: 25%;
     /* background: yellow; */
 }
 
 .our-team-main .otm img {
     width: 100%;
     border-radius: 1rem;
-    height: 300px;
+    height: 320px;
+    aspect-ratio: 1/1;
     object-fit: cover;
+    object-position: 50% 0%;
+    /* border-radius: 50%; */
+    background: var(--mixedlight);
 }
 
 .our-team-main .otm h2 {
     margin: .75rem 0 .5rem;
     font-size: 1.5rem;
     line-height: 1;
-    padding-left: 5%;
+    /* padding-left: 5%; */
     font-weight: 600;
+    text-align: center;
 }
 
 .our-team-main .otm p {
+    text-align: center;
     text-transform: capitalize;
     opacity: .5;
+    font-size: 1.25rem;
     line-height: 1.2;
-    padding-left: 5%;
+    /* padding-left: 5%; */
 }
 
 @media screen and (max-width: 1200px) {
@@ -767,18 +776,21 @@
     .our-team-main .otm p {
         text-align: center;
         padding-left: 0%;
+        font-size: 1rem;
     }
 
     .our-team-main .otm img {
         width: 100%;
         border-radius: 1.25rem;
-        height: 240px;
+        height: 250px;
         object-position: 50% 0%;
     }
 
     .our-team-main {
         gap: 1.5rem 2%;
         overflow-x: scroll !important;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
     }
 }
 
@@ -816,7 +828,7 @@
     border: 1px solid var(--black);
     width: 50%;
     padding: 3rem;
-    border-radius: 1rem;
+    border-radius: 2rem;
     display: flex;
     flex-direction: column;
     background: var(--white);
@@ -928,7 +940,7 @@ input[type="number"] {
         font-size: 2rem;
     }
 
-    .form-main p{
+    .form-main p {
         font-size: 1rem;
         margin-bottom: 0;
     }
@@ -939,5 +951,191 @@ input[type="number"] {
 
     .form-container * {
         font-size: 1rem;
+    }
+}
+
+/* ------------------ */
+/* story-1 */
+
+.story-1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.story-1 h2 {
+    min-width: 30%;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -3%;
+    font-size: 3rem;
+}
+
+.story-1 p {
+    font-size: 1.25rem;
+}
+
+.story-2 {
+    width: 100%;
+    overflow: hidden;
+    height: 600px;
+    object-position: 50% 0;
+    object-fit: cover;
+    display: block;
+}
+
+.story-3 {
+    padding-block: 4rem;
+    display: flex;
+    gap: 4rem;
+    padding-inline: 20%;
+    justify-content: space-between;
+}
+
+.story-3-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 20%;
+    /* background: yellow; */
+}
+
+.story-3-tabs h4 {
+    cursor: pointer;
+    /* opacity: 0.5; */
+    transition: 0.3s ease;
+    padding: .5rem 2rem;
+    text-align: center;
+    border-radius: 2rem;
+    border: 1px solid var(--black);
+    color: var(--black);
+    background: var(--mixedlight);
+}
+
+.story-3-tabs h4.active {
+    opacity: 1;
+    background: var(--black);
+    color: var(--white);
+}
+
+.story-3-tabs-content .tab-content {
+    display: none;
+}
+
+.story-3-tabs-content .tab-content.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+.story-3-tabs-content * {
+    font-size: 1.25rem;
+}
+
+.story-3-tabs-content h2 {
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    letter-spacing: -3%;
+}
+
+.story-3-tabs-content p{
+    line-height: 1.75;
+}
+
+/* .story-3-tabs-content p {
+    margin-top: 1rem;
+}
+
+.story-3-tabs-content p:first-child {
+    margin-top: 0;
+} */
+
+.story-3-tabs-content p span {
+    font-weight: 600;
+    line-height: inherit;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .story-2 {
+        height: 550px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .story-2 {
+        height: 450px;
+    }
+
+    .story-3 {
+        padding-inline: 10%;
+    }
+
+    .story-3-tabs-content * {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .story-2 {
+        height: 300px;
+    }
+
+    .story-1 {
+        flex-direction: column;
+        gap: 1rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .story-3-tabs {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: .25rem;
+    }
+
+    .story-3-tabs h4 {
+        padding: .5rem 1.25rem;
+        width: calc(50% - .25rem);
+    }
+
+    .story-1 p {
+        font-size: 1rem;
+    }
+
+    .story-3-tabs-content h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        display: none;
+    }
+
+    .story-3 {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding-block: 2rem;
+        padding-inline: 5%;
+    }
+
+    .story-3-tabs-content p {
+        text-align: center;
+    }
+
+    .story-1 h2 {
+        width: 100%;
+        font-size: 1.75rem;
     }
 }

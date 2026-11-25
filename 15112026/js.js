@@ -53,7 +53,7 @@ bottomB.addEventListener("click", function () {
 setInterval(function () {
     const preloader = document.querySelector('#preloader');
     preloader.classList.add('hide');
-}, 1000);
+}, 1300);
 
 // -------------------------------------------------------------------------
 /* Call appointment show after 200px scroll */
@@ -70,65 +70,66 @@ if (scrollCtas) {
 }
 
 // -------------------------------------------------------------------------
-const items = document.querySelectorAll(".right-item");
+document.addEventListener('DOMContentLoaded', () => {
+    let lastWidth = window.innerWidth;
+    let resizeTimer;
 
-let currentIndex = 0;
-let autoPlay;
+    window.addEventListener('resize', () => {
+        if (window.innerWidth !== lastWidth) {
+            lastWidth = window.innerWidth;
+            clearTimeout(resizeTimer);
 
-function activateTab(index) {
-    clearTimeout(autoPlay);
-
-    items.forEach(item => {
-        item.classList.remove("active");
-    });
-
-    currentIndex = index;
-    items[currentIndex].classList.add("active");
-
-    autoPlay = setTimeout(() => {
-        const nextIndex = (currentIndex + 1) % items.length;
-        activateTab(nextIndex);
-    }, 8000);
-}
-
-// Manual tab click
-items.forEach((item, index) => {
-    item.addEventListener("click", () => {
-        activateTab(index);
+            resizeTimer = setTimeout(() => {
+                window.location.reload();
+            }, 300);
+        }
     });
 });
-
-// Start autoplay
-activateTab(0);
 
 // -------------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     const audioToggle = document.getElementById("audioToggle");
     const myAudio1 = document.getElementById("myAudio");
-    myAudio1.volume = .1;
+    myAudio1.volume = 0.5;
+
+    let scrollTriggered = false;
+    let userPaused = false;
+
+    const tryAutoplayOnScroll = () => {
+        if (scrollTriggered || userPaused || !myAudio1.paused) return;
+
+        if (window.scrollY > 150) { // Adjust scroll threshold (in pixels) as needed
+            myAudio1.play()
+                .then(() => {
+                    scrollTriggered = true;
+                    window.removeEventListener("scroll", tryAutoplayOnScroll);
+                })
+                .catch(error => {
+                    // Browser blocked autoplay until user clicks/taps the page
+                    console.log("Scroll autoplay blocked:", error);
+                });
+        }
+    };
+
+    window.addEventListener("scroll", tryAutoplayOnScroll, { passive: true });
 
     audioToggle.addEventListener("click", () => {
         if (myAudio1.paused) {
-            myAudio1.play()
-                .then(() => {
-                    audioToggle.classList.add("active");
-                })
-                .catch(error => {
-                    console.log("Audio playback failed:", error);
-                });
+            userPaused = false;
+            myAudio1.play().catch(error => {
+                console.log("Audio playback failed:", error);
+            });
         } else {
+            userPaused = true;
             myAudio1.pause();
-            audioToggle.classList.remove("active");
         }
     });
 
     myAudio1.addEventListener("play", () => {
         audioToggle.classList.add("active");
-        // console.log(myAudio1.volume);
     });
 
     myAudio1.addEventListener("pause", () => {
         audioToggle.classList.remove("active");
-        // console.log(myAudio1.volume);
     });
-})
+});

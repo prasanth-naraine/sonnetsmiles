@@ -74,7 +74,7 @@ a {
     width: 100%;
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1200px) {
     .navbar-adjuster {
         height: 7rem;
     }
@@ -109,7 +109,7 @@ a {
     font-size: 2.5rem;
     font-weight: 500;
     text-align: center;
-    letter-spacing: -5%;
+    letter-spacing: -3%;
 }
 
 .common-heading p {
@@ -773,10 +773,11 @@ a {
 }
 
 .blogs-main-heading h2 {
-    font-size: 3rem;
+    font-size: 2.25rem;
     min-width: 40%;
     font-weight: 500;
     line-height: 1;
+    letter-spacing: -3%;
 }
 
 .blogs-main-heading p {
@@ -787,17 +788,19 @@ a {
 @media screen and (max-width: 800px) {
     .blogs-main-heading p {
         font-size: 1rem;
-        text-align: end;
+        text-align: center;
     }
 
     .blogs-main-heading h2 {
         font-size: 1.5rem;
         min-width: max-content;
+        text-align: center;
     }
 
     .blogs-main-heading {
-        gap: 2rem;
+        gap: .75rem;
         padding-bottom: 1.5rem;
+        flex-direction: column;
     }
 }
 
@@ -908,7 +911,7 @@ a {
 
 .blogs-internal-content h2 {
     font-size: 3rem;
-    letter-spacing: -5%;
+    letter-spacing: -3%;
     text-align: center;
 }
 
@@ -1184,5 +1187,208 @@ a {
         height: 40px;
         width: 40px;
         padding: .6rem;
+    }
+}
+
+/* ------------------- */
+/* roadmap-section */
+
+.roadmap-section {
+    display: flex;
+    gap: 1rem;
+    overflow: visible !important;
+    flex-direction: column;
+    padding-top: 3rem;
+}
+
+/* .roadmap-section::before{
+    content: '';
+    width: 1px;
+    background: red;
+    border-left: 5px dotted var(--mixed);
+    height: calc(100% - 400px);
+    position: absolute;
+    left: calc(15% + 1.5rem);
+    top: 0;
+} */
+
+.roadmap-section img {
+    min-width: 45%;
+    max-width: 45%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.rs-div .num {
+    background: var(--black);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: max-content; */
+    /* border-radius: 50%; */
+}
+
+.rs-div {
+    position: relative;
+    display: flex;
+    height: 500px;
+    gap: 2rem;
+    justify-content: space-between;
+    position: sticky;
+    top: 100px;
+    background: var(--white);
+    padding: 4rem;
+    /* border: 1px solid red; */
+    border-radius: 2rem;
+    border: 1px solid var(--mixed);
+}
+
+.rs-div .content {
+    max-width: 35%;
+}
+
+.rs-div .content h2 {
+    font-size: 2.25rem;
+    font-weight: 500;
+    letter-spacing: -3%;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.rs-div .content p {
+    font-size: 1.25rem;
+    opacity: .5;
+}
+
+@media screen and (max-width: 1700px) {
+    .rs-div .content h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .rs-div .content p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .rs-div {
+        padding: 1.5rem 1.5rem;
+        flex-direction: column;
+        height: min-content;
+        gap: 1rem;
+        border-radius: 1.5rem;
+        overflow: hidden;
+        top: 80px;
+    }
+
+    .rs-div .num {
+        min-height: 50px;
+    }
+
+    .rs-div .content p {
+        font-size: .9rem;
+    }
+
+    .rs-div .content h2 {
+        font-size: 1.5rem;
+    }
+
+    .rs-div .content {
+        max-width: 100%;
+    }
+
+    .roadmap-section {
+        gap: 5rem;
+    }
+
+    .roadmap-section img {
+        min-width: 100%;
+        height: 200px;
+    }
+}
+
+/* ---------------- */
+/* common-cta */
+.common-cta {
+    background: var(--black);
+    padding-block: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.common-cta h2 {
+    font-size: 2.5rem;
+    line-height: 1;
+    letter-spacing: -3%;
+    color: red;
+}
+
+.common-cta p {
+    font-size: 1.25rem;
+    padding-inline: 25%;
+}
+
+.common-cta * {
+    color: var(--white);
+    text-align: center;
+}
+
+.common-cta-a {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.common-cta-a a {
+    color: var(--black);
+    background: var(--white);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+@media screen and (max-width: 1700px) {
+    .common-cta h2 {
+        font-size: 2rem;
+    }
+
+    .common-cta p {
+        padding-inline: 20%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .common-cta p {
+        padding-inline: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .common-cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .common-cta {
+        padding-block: 3rem;
+    }
+
+    .common-cta-a {
+        gap: .5rem;
+        margin-top: 1rem;
+    }
+
+    .common-cta-a a {
+        padding: .5rem 1.75rem;
+    }
+
+    .common-cta p {
+        font-size: 1rem;
     }
 }
