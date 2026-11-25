@@ -66,8 +66,25 @@
         <img src="./logo/logoT.png" alt="cars">
     </div>
 
+    <div class="top-bottom">
+        <p id="top">Top <i class="fa-regular fa-circle-up"></i></p>
+        <p id="bottom">End <i class="fa-regular fa-circle-down"></i></p>
+    </div>
+
+    <div class="audio-play" id="audioToggle">
+        <i class="fa-solid fa-play"></i>
+        <i class="fa-solid fa-pause"></i>
+    </div>
+
+    <audio id="myAudio" src="./mp3/atlasaudio-longing-512256.mp3" preload="metadata" loop></audio>
+
+    <!-- Fixed top container for the progress tracker -->
+    <div class="progress-container overflow-control">
+        <div class="progress-bar" id="myProgressBar"></div>
+    </div>
+
     <!-- navbar -->
-    <div class="navbar">
+    <div class="navbar" id="audio-trigger-section">
         <a href="./" class="navbar-logo">
             <img src="./logo/logoT.png" alt="Sonnet Smile">
         </a>
@@ -151,18 +168,18 @@
 
     <!-- call appointment -->
     <div class="call-appointment" id="call-appointment">
-        <a href="">(+91) 9988776655</a>
-        <a href="">Book an Appointment</a>
+        <a href="tel:+919458600028">(+91) 9458600028</a>
+        <a href="#form-bait">Book an Appointment</a>
     </div>
 
     <!-- section 01 -->
     <div class="section-a common-width">
-        <h1 data-aos="fade-up" data-aos-delay="1700">
+        <h1 data-aos="fade-up" data-aos-delay="200">
             Dentistry, considered in every detail.
         </h1>
 
         <div class="right">
-            <h3 data-aos="fade-up" data-aos-delay="1800">
+            <h3 data-aos="fade-up" data-aos-delay="300">
                 We design smiles with careful attention to proportions, symmetry and harmony, guided by clinical
                 precision, ethical practice and an understanding of what makes you uniquely you.
             </h3>
@@ -179,77 +196,7 @@
             </div>
         </div>
     </div>
-
-    <!-- <div class="height-a"></div> -->
-    <!-- <div class="section-b common-width">
-        <p data-aos="fade-up" data-aos-delay="100">
-            <i class="fa-solid fa-circle"></i>
-            A Friendly Place
-        </p>
-        <h2 data-aos="fade-up" data-aos-delay="100">
-            We Believe Good Dental Visits Start With Listening Carefully, Explaining Clearly, And Helping People Feel
-            Comfortable From Day One.
-        </h2>
-    </div> -->
-    <!-- <div class="video-main common-width">
-        <video src="https://nhdentistrybeverlyhills.com/assets/video/philosophy-video.mp4" autoplay muted loop
-            playsinline></video>
-    </div> -->
-
-    <!-- <div class="height-a"></div> -->
-
-    <!-- marquee -->
-    <!-- <div class="marquee">
-        <div class="marquee-track">
-            <div class="marquee-item">General Dentistry</div>
-            <div class="marquee-item">Cosmetic Dentistry</div>
-            <div class="marquee-item">Smile Makeover</div>
-            <div class="marquee-item">Dental Implants</div>
-            <div class="marquee-item">Single Tooth Implants</div>
-            <div class="marquee-item">Full Mouth Rehabilitation</div>
-            <div class="marquee-item">Root Canal Treatment</div>
-            <div class="marquee-item">Laser Dentistry</div>
-            <div class="marquee-item">Teeth Whitening</div>
-            <div class="marquee-item">Dental Veneers</div>
-            <div class="marquee-item">Dental Crowns & Bridges</div>
-            <div class="marquee-item">Smile Designing</div>
-            <div class="marquee-item">Invisible Braces</div>
-            <div class="marquee-item">Metal Braces</div>
-            <div class="marquee-item">Orthodontic Treatment</div>
-            <div class="marquee-item">Clear Aligners</div>
-            <div class="marquee-item">Wisdom Tooth Removal</div>
-            <div class="marquee-item">Tooth Extraction</div>
-            <div class="marquee-item">Pediatric Dentistry</div>
-            <div class="marquee-item">Kids Dental Care</div>
-            <div class="marquee-item">Preventive Dentistry</div>
-            <div class="marquee-item">Dental Cleaning & Scaling</div>
-            <div class="marquee-item">Gum Disease Treatment</div>
-            <div class="marquee-item">Gum Contouring</div>
-            <div class="marquee-item">Periodontal Treatment</div>
-            <div class="marquee-item">Full Mouth Scaling</div>
-            <div class="marquee-item">Tooth-Coloured Fillings</div>
-            <div class="marquee-item">Dental Bonding</div>
-            <div class="marquee-item">Broken Tooth Restoration</div>
-            <div class="marquee-item">Tooth Sensitivity Treatment</div>
-            <div class="marquee-item">Bad Breath Treatment</div>
-            <div class="marquee-item">Emergency Dental Care</div>
-            <div class="marquee-item">Dental X-Rays</div>
-            <div class="marquee-item">Digital Dentistry</div>
-            <div class="marquee-item">Full Mouth Dental Checkup</div>
-            <div class="marquee-item">Advanced Implant Dentistry</div>
-            <div class="marquee-item">Dentures & Tooth Replacement</div>
-            <div class="marquee-item">Porcelain Veneers</div>
-            <div class="marquee-item">Ceramic Crowns</div>
-            <div class="marquee-item">Painless Root Canal Treatment</div>
-            <div class="marquee-item">Bruxism Treatment</div>
-            <div class="marquee-item">TMJ Disorder Treatment</div>
-            <div class="marquee-item">Dental Restoration</div>
-            <div class="marquee-item">Oral Health Consultation</div>
-            <div class="marquee-item">Complete Smile Care</div>
-            <div class="marquee-item">Healthy Smiles Begin Here</div>
-        </div>
-    </div> -->
-
+    
     <div class="height-a"></div>
 
     <div class="common-heading">
@@ -308,12 +255,6 @@
         <h2>
             Comprehensive Oral Care
         </h2>
-        <!-- <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas hic consequuntur, error ab natus ducimus
-            necessitatibus suscipit eaque ratione minima unde repudiandae a maxime aut doloremque qui aliquid, placeat
-            dignissimos! Et inventore natus atque quae nam eligendi illo id libero. Nihil dolore ipsum impedit magnam
-            harum! Dolore porro vero rem?
-        </p> -->
     </div>
 
     <div class="section-c">
@@ -348,117 +289,83 @@
 
     <div class="height-a"></div>
 
-    <!-- <div class="common-heading common-width">
-        <h2>
-            See the difference for yourself
-        </h2>
-    </div> -->
-
-    <!-- <div class="comparison-container common-width" data-aos="fade-up" data-aos-delay="200" id="comparison">
-        <div class="image-wrapper image-before">
-            <img src="https://framerusercontent.com/images/E5VtCUtG8dUklZWKGgyK4GdtDA.png?width=1538&height=1023"
-                alt="Before" />
-        </div>
-
-        <div class="image-wrapper image-after">
-            <img src="https://framerusercontent.com/images/Oqy9319b2uv11O0YWGDDUoh5c.png?width=1537&height=1023"
-                alt="After" />
-        </div>
-
-        <span class="label label-before">Usual Routine</span>
-        <span class="label label-after">Dental Treatments</span>
-
-        <div class="slider-line" id="sliderLine"></div>
-
-        <div class="slider-knob" id="sliderKnob">
-            <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 25 25" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M9.5 8C10.3284 8 11 7.32843 11 6.5C11 5.67157 10.3284 5 9.5 5C8.67157 5 8 5.67157 8 6.5C8 7.32843 8.67157 8 9.5 8ZM9.5 14C10.3284 14 11 13.3284 11 12.5C11 11.6716 10.3284 11 9.5 11C8.67157 11 8 11.6716 8 12.5C8 13.3284 8.67157 14 9.5 14ZM11 18.5C11 19.3284 10.3284 20 9.5 20C8.67157 20 8 19.3284 8 18.5C8 17.6716 8.67157 17 9.5 17C10.3284 17 11 17.6716 11 18.5ZM15.5 8C16.3284 8 17 7.32843 17 6.5C17 5.67157 16.3284 5 15.5 5C14.6716 5 14 5.67157 14 6.5C14 7.32843 14.6716 8 15.5 8ZM17 12.5C17 13.3284 16.3284 14 15.5 14C14.6716 14 14 13.3284 14 12.5C14 11.6716 14.6716 11 15.5 11C16.3284 11 17 11.6716 17 12.5ZM15.5 20C16.3284 20 17 19.3284 17 18.5C17 17.6716 16.3284 17 15.5 17C14.6716 17 14 17.6716 14 18.5C14 19.3284 14.6716 20 15.5 20Z"
-                    fill="#121923" />
-            </svg>
-        </div>
-    </div> -->
-
-    <!-- <div class="height-a"></div> -->
-
     <div class="section-d common-width">
         <div class="sd-one">
             <i class="fa-solid fa-circle"></i>
-            Why Patients Stay
+            The Details That Matter
         </div>
+
         <div class="sd-two">
             <div class="left">
                 <h3>
-                    We make decisions with patients, not for them
+                    Your Smile, Your Choices. We Make Every Step Count.
                 </h3>
-                <img src="https://cdn.prod.website-files.com/6a41f6e1adab917fcef17541/6a4f34a546d6ad57aa9a0e94_why-img.avif"
-                    alt="">
+                <img src="https://rendia.com/wp-content/uploads/2014/10/Shared-Decision-Making.jpg"
+                    alt="Personalized dental care and smile consultation at Sonnet Smile">
             </div>
 
             <div class="right">
                 <div class="right-item active">
                     <div class="right-top">
-                        <h4>Feel At Ease</h4>
+                        <h4>Feel Comfortable</h4>
                         <h6>01</h6>
                     </div>
                     <div class="right-bottom">
-                        Years of hiding your teeth can feel exhausting. Results are planned around your features and
-                        goals.
+                        Your dental journey should feel reassuring from the very beginning.
+                        We take time to understand your concerns, explain your options,
+                        and help you feel comfortable at every step.
                     </div>
                     <div class="right-progress"></div>
                 </div>
 
                 <div class="right-item">
                     <div class="right-top">
-                        <h4>Built Around You</h4>
+                        <h4>Personalized Smile Care</h4>
                         <h6>02</h6>
                     </div>
                     <div class="right-bottom">
-                        Every treatment is personalized around your needs and goals.
-                        Enjoy results designed to help you feel confident in your smile.
-                        Enjoy results designed to help you feel confident in your smile.
-                        Enjoy results designed to help you feel confident in your smile. Enjoy results designed to help
-                        you feel confident in your smile.
-                        Enjoy results designed to help you feel confident in your smile.
-                        Enjoy results designed to help you feel confident in your smile.
+                        Every smile is unique, and your treatment should be too.
+                        At Sonnet Smile, we consider your dental needs, facial features,
+                        preferences, and goals to create a treatment plan that feels right for you.
                     </div>
                     <div class="right-progress"></div>
                 </div>
 
                 <div class="right-item">
                     <div class="right-top">
-                        <h4>Lasting Confidence</h4>
+                        <h4>Honest Guidance</h4>
                         <h6>03</h6>
                     </div>
                     <div class="right-bottom">
-                        Enjoy results designed to help you feel confident in your smile.
-                        Enjoy results designed to help you feel confident in your smile.
-                        Enjoy results designed to help you feel confident in your smile.
+                        We believe informed decisions lead to better experiences.
+                        Our team takes the time to explain procedures, discuss suitable
+                        treatment options, and answer your questions with clarity.
                     </div>
                     <div class="right-progress"></div>
                 </div>
 
                 <div class="right-item">
                     <div class="right-top">
-                        <h4>Lasting Confidence</h4>
+                        <h4>Care That Puts You First</h4>
                         <h6>04</h6>
                     </div>
                     <div class="right-bottom">
-                        Enjoy results designed to help you feel confident in your smile.
-                        Enjoy results designed to help you feel confident in your smile.
-                        Enjoy results designed to help you feel confident in your smile.
+                        From your first consultation to your follow-up visits,
+                        your comfort and well-being remain our priority.
+                        Experience dental care that listens, understands, and puts you first.
                     </div>
                     <div class="right-progress"></div>
                 </div>
 
                 <div class="right-item">
                     <div class="right-top">
-                        <h4>Lasting Confidence</h4>
+                        <h4>Confidence That Lasts</h4>
                         <h6>05</h6>
                     </div>
                     <div class="right-bottom">
-                        Enjoy results designed to help you feel confident in your smile. Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Amet, numquam!
+                        A healthy, confident smile can make a meaningful difference
+                        in everyday life. We're here to help you care for your smile
+                        with thoughtful treatments and guidance for long-term oral health.
                     </div>
                     <div class="right-progress"></div>
                 </div>
@@ -466,54 +373,56 @@
         </div>
     </div>
 
-    <div class="height-a"></div>
+    <div class="height-a" id="form-bait"></div>
 
-    <!-- <div class="metrics">
-        <div class="metrics-div">
-            <div class="value value-last" data-aos="fade-up" data-aos-delay="200" data-target="100">0</div>
-            <div class="value-description" data-aos="fade-up" data-aos-delay="400">
-                Patient Satisfaction & Comfort First
-            </div>
+    <div class="form-main common-width">
+        <h3>
+            Let's Talk
+        </h3>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos quidem tempora ipsum animi minus nesciunt
+            rerum architecto ducimus cupiditate fuga veniam, praesentium, placeat iste culpa. Nulla, animi excepturi
+            ipsum tempore obcaecati.
+        </p>
+
+        <div class="form-container">
+            <label for="first-name">First Name</label>
+            <input id="first-name" type="text" placeholder="First Name" maxlength="20">
+
+            <label for="last-name">Last Name</label>
+            <input id="last-name" type="text" placeholder="Last Name" maxlength="20">
+
+            <label for="email">Email Id</label>
+            <input id="email" type="email" placeholder="Your Email Id" maxlength="40">
+
+            <label for="phone">Phone Number</label>
+            <input id="phone" type="tel" placeholder="Your Phone Number" maxlength="17"
+                oninput="this.value = this.value.replace(/[^0-9+\-\s]/g, '').slice(0, this.maxLength);" />
+
+            <label for="country">Nature of the Query</label>
+            <select name="country" id="country" required>
+                <option value="" selected>-- Please select --</option>
+                <option value="EMERGENCY">EMERGENCY</option>
+                <option value="ORTHODONTIC (Teeth alignment)">ORTHODONTIC (Teeth alignment)</option>
+                <option value="TOOTH DECAY RELATED">TOOTH DECAY RELATED</option>
+                <option value="GENERAL ENQUIRY">GENERAL ENQUIRY</option>
+            </select>
+
+            <button type="submit">Submit Form</button>
         </div>
-
-        <div class="metrics-div">
-            <div class="value" data-aos="fade-up" data-aos-delay="200" data-target="15">0</div>
-            <div class="value-description" data-aos="fade-up" data-aos-delay="400">
-                Years of Expertise & Trust
-            </div>
-        </div>
-
-        <div class="metrics-div">
-            <div class="value" data-aos="fade-up" data-aos-delay="200" data-target="15">0</div>
-            <div class="value-description" data-aos="fade-up" data-aos-delay="400">
-                Technologies – Modern Dentistry
-            </div>
-        </div>
-
-        <div class="metrics-div">
-            <div class="value value-last" data-aos="fade-up" data-aos-delay="200" data-target="100">0</div>
-            <div class="value-description" data-aos="fade-up" data-aos-delay="400">
-                Commitment to Safety & Hygiene
-            </div>
-        </div>
-    </div> -->
-
-    <div class="form" id="form">
 
     </div>
-
-    <div class="height-a"></div>
 
     <!-- footer -->
     <div class="foot common-width">
         <div class="line1" data-aos="fade-up" data-aos-delay="100">
-            Built on thousands of conversations, appointments, and returning patients.
+            Every Smile deserves Thoughtful care - We look forward to welcoming you to "Sonnet Smile Lab"
         </div>
 
         <div class="line2">
             <div class="left">
-                <a href="" data-aos="fade-up" data-aos-delay="100">
-                    Book Your Appointment
+                <a href="#form-bait" data-aos="fade-up" data-aos-delay="100">
+                    Schedule Your Visit
                     <img src="https://cdn.prod.website-files.com/6a41f6e1adab917fcef17541/6a44fea1d6e7edc9a4b41fe7_arrow-right.svg"
                         alt="">
                 </a>
@@ -528,7 +437,7 @@
 
                 <a href="https://maps.app.goo.gl/tbWyoGAb2FeHuSiw6" target="_blank" rel="noopener noreferrer"
                     class="location" aria-label="Find our dental clinic" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fa-solid fa-street-view"></i>
+                    <i class="fa-solid fa-location-dot"></i>
                 </a>
 
                 <a href="https://www.instagram.com/sonnetsmilelab" target="_blank" rel="noopener noreferrer"
@@ -539,38 +448,13 @@
         </div>
 
         <div class="line3">
-            <!-- <div class="line3-div">
-                <h3 data-aos="fade-up" data-aos-delay="100">Pages</h3>
-                <nav>
-                    <a data-aos="fade-up" data-aos-delay="100" href="#">Home</a>
-                    <a data-aos="fade-up" data-aos-delay="100" href="#">All Services</a>
-                    <a data-aos="fade-up" data-aos-delay="100" href="#">Meet the Team</a>
-                    <a data-aos="fade-up" data-aos-delay="100" href="#">The Experience</a>
-                    <a data-aos="fade-up" data-aos-delay="100" href="#">Blogs</a>
-                    <a data-aos="fade-up" data-aos-delay="100" href="#">Contact</a>
-                </nav>
-            </div> -->
-
-            <!-- <div class="line3-div">
-                <h3 data-aos="fade-up" data-aos-delay="100">Utility Pages</h3>
-                <nav>
-                    <a data-aos="fade-up" data-aos-delay="100" href="#">Sitemap</a>
-                    <a data-aos="fade-up" data-aos-delay="100" href="#">Privacy Policy</a>
-                    <a data-aos="fade-up" data-aos-delay="100" href="#">Payment Policy</a>
-                </nav>
-            </div> -->
-
             <div class="line3-div">
                 <h3 data-aos="fade-up" data-aos-delay="100">Contact</h3>
-
-                <!-- <p data-aos="fade-up" data-aos-delay="100">
-                    Phone: <a href="tel:+919458600028">(+91) 9458600028</a>
-                </p> -->
                 <p data-aos="fade-up" data-aos-delay="100">
                     Emergency: <a href="tel:+919458600028">(+91) 9458600028</a>
                 </p>
                 <p data-aos="fade-up" data-aos-delay="100">
-                    Email: <a href="mailto:hello@oralux.com">hello@oralux.com</a>
+                    Email: <a href="mailto:hello@oralux.com">hello@sonnetsmile.com</a>
                 </p>
             </div>
 
@@ -585,15 +469,11 @@
                 <h3 data-aos="fade-up" data-aos-delay="100">Opening Hours</h3>
 
                 <p data-aos="fade-up" data-aos-delay="100">
-                    Monday – Friday:<br>
+                    Monday – Saturday:<br>
                     9:00 AM – 9:00 PM
                 </p>
                 <p data-aos="fade-up" data-aos-delay="100">
-                    Saturday:<br>
-                    9:00 AM – 5:00 PM
-                </p>
-                <p data-aos="fade-up" data-aos-delay="100">
-                    Sunday: Closed
+                    Sunday & State Govt <br> Approved Holidays - Closed
                 </p>
             </div>
         </div>

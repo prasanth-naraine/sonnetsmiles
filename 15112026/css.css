@@ -340,6 +340,7 @@
     height: 450px;
     width: 100%;
     object-fit: cover;
+    border: 1px solid var(--black);
 }
 
 .section-d .sd-two .right {
@@ -784,7 +785,159 @@
 /* -------------------- */
 /* form */
 
-.form{
-    min-height: 500px;
-    background: yellow;
+.form-main {
+    background: var(--mixedlight);
+    padding-block: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-main * {
+    text-align: center;
+}
+
+.form-main h3 {
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -3%;
+}
+
+.form-main p {
+    font-size: 1.25rem;
+    max-width: 70%;
+    margin-bottom: 2rem;
+}
+
+.form-container {
+    border: 1px solid var(--black);
+    width: 50%;
+    padding: 3rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    gap: 2rem;
+    position: relative;
+}
+
+.form-container * {
+    font-size: 1.25rem;
+}
+
+.form-container label {
+    text-align: left;
+    padding-left: 1.5rem;
+    margin-bottom: -1.5rem;
+}
+
+.form-container input,
+.form-container select {
+    padding: .5rem 1.5rem;
+    border: 1px solid var(--black);
+    border-radius: 2rem;
+    text-align: left;
+    position: relative;
+    outline: none !important;
+    background-color: var(--white);
+    color: var(--black);
+    transition: background-color 0.2s ease;
+}
+
+/* Custom dropdown arrow without extra wrapper */
+.form-container select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 3rem;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://w3.org' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1.25rem center;
+    background-size: 1rem;
+}
+
+/* Muted placeholder look when no option is selected */
+.form-container select:invalid {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.form-container input::placeholder {
+    font-size: 1rem;
+    opacity: .5;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Turns green as soon as text is typed or an option is selected */
+.form-container input:not(:placeholder-shown),
+.form-container select:valid {
+    background-color: var(--mixedlight);
+    outline: none;
+}
+
+/* Submit button matching the 2rem pill aesthetic */
+.form-container button[type="submit"] {
+    padding: .5rem 1.5rem;
+    border: 1px solid var(--black);
+    border-radius: 2rem;
+    background-color: var(--black);
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.form-container button[type="submit"]:hover {
+    opacity: 0.85;
+}
+
+@media screen and (width <=1400px) {
+    .form-main p {
+        max-width: 100%;
+    }
+
+    .form-main h3 {
+        font-size: 2.5rem;
+    }
+
+    .form-container {
+        width: 60%;
+    }
+}
+
+@media screen and (width <=800px) {
+    .form-container {
+        width: 100%;
+        padding: 2.5rem 1.5rem;
+        gap: 1.25rem;
+    }
+
+    .form-main h3 {
+        font-size: 2rem;
+    }
+
+    .form-main p{
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+
+    .form-container label {
+        margin-bottom: -1rem;
+    }
+
+    .form-container * {
+        font-size: 1rem;
+    }
 }

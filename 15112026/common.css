@@ -29,13 +29,13 @@ body {
 }
 
 .height-a {
-    height: 4rem;
+    height: 100px;
     /* background: red; */
 }
 
 @media screen and (width <=800px) {
     .height-a {
-        height: 3rem;
+        height: 50px;
     }
 }
 
@@ -451,8 +451,9 @@ a {
 
 .foot .line1 {
     font-size: 2.5rem;
-    max-width: 60%;
+    max-width: 70%;
     line-height: 1.25;
+    letter-spacing: -3% !important;
 }
 
 .foot .line2 {
@@ -610,6 +611,8 @@ a {
     .foot .line4 {
         padding-top: .75rem;
         font-size: 1rem;
+        padding-right: 15%;
+        text-align: left;
     }
 
     .foot .line3 .line3-div {
@@ -974,7 +977,7 @@ a {
     margin-bottom: .5rem;
 }
 
-.blogs-internal-content ul li:last-child{
+.blogs-internal-content ul li:last-child {
     margin-bottom: 0 !important;
 }
 
@@ -1032,4 +1035,154 @@ a {
         line-height: 1.1;
     }
 
+}
+
+
+/* ---------------------------- */
+/* top bottom */
+.top-bottom {
+    position: fixed;
+    width: 100%;
+    right: 2.5%;
+    bottom: 1rem;
+    max-width: max-content;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.25rem;
+    z-index: var(--manager) !important;
+}
+
+.top-bottom p {
+    padding: 0.5rem 0.75rem;
+    line-height: 1;
+    font-weight: 500 !important;
+    color: var(--white);
+    background: var(--black);
+    border: 1px solid var(--black);
+    /* border-radius: 1.5rem; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    text-align: center;
+}
+
+.top-bottom p * {
+    color: var(--white);
+}
+
+.top-bottom p:is(:hover, :active, :focus) {
+    background: var(--white);
+    color: var(--black);
+}
+
+.top-bottom p:is(:hover, :active, :focus) * {
+    color: var(--black);
+}
+
+.top-bottom p,
+.top-bottom p * {
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 800px) {
+
+    .top-bottom {
+        right: 5%;
+        bottom: 4rem;
+    }
+
+    .top-bottom p,
+    .top-bottom p * {
+        font-size: 1rem;
+    }
+}
+
+/* ------------------- */
+/* audio-play */
+.audio-play {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    left: 2.5%;
+    bottom: 1rem;
+    background: white;
+    padding: 1rem;
+    z-index: var(--manager);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 2px solid var(--black);
+}
+
+.audio-play .fa-play * {
+    display: block;
+    color: var(--black) !important;
+}
+
+/* Expanding wave rings (only visible when .active) */
+/* .audio-play::before,
+.audio-play::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: .5px solid var(--mixed);
+    Use background: rgba(148, 170, 255, 0.4); instead of border for a filled ripple
+    z-index: 1;
+    background: var(--white);
+    pointer-events: none;
+    animation: audio-wave 1.5s ease infinite;
+} */
+
+/* Stagger the second wave ring */
+/* .audio-play.active::after {
+    animation-delay: 2s;
+} */
+
+/* @keyframes audio-wave {
+    from {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+} */
+
+/* .audio-play.active {
+    background: var(--black);
+} */
+
+.audio-play .fa-pause {
+    display: none !important;
+}
+
+.audio-play .fa-play {
+    display: block !important;
+}
+
+.audio-play.active .fa-play {
+    display: none !important;
+}
+
+.audio-play.active .fa-pause {
+    display: block !important;
+}
+
+@media screen and (width <=800px) {
+    .audio-play {
+        left: 5%;
+        bottom: 4rem;
+        height: 40px;
+        width: 40px;
+        padding: .6rem;
+    }
 }
