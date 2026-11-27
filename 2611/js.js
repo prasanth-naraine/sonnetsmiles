@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const audioToggle = document.getElementById("audioToggle");
     const myAudio1 = document.getElementById("myAudio");
-    myAudio1.volume = 0.5;
+    myAudio1.volume = 0.2;
 
     let scrollTriggered = false;
     let userPaused = false;
